@@ -6,8 +6,8 @@
 Recently I’ve conducted my own little experiment with the document recognition technology: I’ve successfully went from an image to the recognized editable text.
 On the way I heavily relied on the two following articles:
 
-1) http://www.pyimagesearch.com/2014/09/01/build-kick-ass-mobile-document-scanner-just-5-minutes/ +
-2) http://www.danvk.org/2015/01/07/finding-blocks-of-text-in-an-image-using-python-opencv-and-numpy.html
+1) http://www.pyimagesearch.com/2014/09/01/build-kick-ass-mobile-document-scanner-just-5-minutes/[Build a Kick-Ass Mobile Document Scanner in Just 5 Minutes] +
+2) http://www.danvk.org/2015/01/07/finding-blocks-of-text-in-an-image-using-python-opencv-and-numpy.html[Finding blocks of text in an image using Python, OpenCV and numpy]
 
 However, I’ve added something myself, and that’s what I want to write about: the ways to improve upon the given articles to achieve the goal of recognizing plain text from photos at arbitrary angles and illumination.
 
@@ -19,7 +19,7 @@ However, I’ve added something myself, and that’s what I want to write about:
 Resulting image at this point can be fed to the Tesseract engine, but to get better results out of it, we can conduct two more steps:
 
 ==== Noise removal
-I’ve experimented with different combinations of Gaussian blur, median blur, erosion and dilation (these last two can sound scary, but they aren’t. See http://docs.opencv.org/2.4/doc/tutorials/imgproc/erosion_dilatation/erosion_dilatation.html).
+I’ve experimented with different combinations of Gaussian blur, median blur, erosion and dilation (these last two can sound scary, but they aren’t. See http://docs.opencv.org/2.4/doc/tutorials/imgproc/erosion_dilatation/erosion_dilatation.html)[Eroding and Dilating]).
 
 * Gaussian blur corrupts text more than median blur
 * I found that using only dilation yields better average results than any other combination of mentioned techniques. 
