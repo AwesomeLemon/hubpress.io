@@ -4,9 +4,11 @@
     "repositoryName": "awesomelemon.github.io",
     "branch": "master"
   },
-  "site": {},
+  "site": {
+    "disqus": "alexchebykin"
+  },
   "socialnetwork": {},
   "theme": {
-    "name": "uno-zen"
+    "name": "ichi"
   }
 }
